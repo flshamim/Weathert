@@ -1,11 +1,11 @@
 const searchTemp = () =>{
-   const city= document.getElementById('weather').value='';
+   const city= document.getElementById('weather').value;
    const cityName =document.getElementById('city-name')
    cityName.innerText=city
-   
    fetch(`https://goweather.herokuapp.com/weather/${city}`)
         .then(res => res.json())
         .then(data => displsyView(data))
+        city.value=''
 }
 
 const displsyView =(data)=>{
@@ -16,6 +16,4 @@ const displsyView =(data)=>{
    
     dscribe.innerText=`${data.description}`
     hot.innerText=`${data.temperature}`
-
- const city= document.getElementById('weather').value='';
 }
