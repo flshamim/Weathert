@@ -9,11 +9,13 @@ const searchTemp = () =>{
 }
 
 const displsyView =(data)=>{
-    console.log(data)
+ 
    
-    const hot = document.getElementById('temp')
+   
     const dscribe =document.getElementById('adrota')
-   
     dscribe.innerText=`${data.description}`
+       console.log(data.description)
+    const hot = document.getElementById('temp')
+    
     hot.innerText=`${data.temperature}`
 }
